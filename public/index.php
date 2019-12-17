@@ -14,20 +14,20 @@
 				<img src="images/3 Pears 1 Lime - Header Fruit.png" alt="">
 			</section>
 		</header>
-		<main class="row">
-			<article id="find" class="col">
+		<main class="column">
+			<article id="find" class="col col-md-6">
 				<section class="container">
 					<h2>Find a <span>Recipe</span></h2>
 					<img src="images/FancySalad.png" alt="">
 				</section>
 			</article>
-			<article id="explore" class="col">
+			<article id="explore" class="col col-md-6">
 				<section class="container">
 					<h2>Explore <span>Cooking</span></h2>
 					<img src="images/pancakes.png" alt="">
 				</section>
 			</article>
-			<article id="submit" class="col">
+			<article id="submit" class="col col-md-6">
 				<section class="container">
 					<h2>Submit a <span>Recipe</span></h2>
 					<img src="images/Fancy Salad 2.png" alt="">
@@ -44,11 +44,10 @@
 					<p class="margin-xl-bottom pad-xl-bottom">Get our 'Pear + Lime' Cocktails booklet <strong><em>FREE</em></strong> on orders over $30, or if you schedule more than 6 deliveries a month!</p>
 				</section>
 			</article>
-			<article id="contact" class="col pad-xl-bottom">
+			<article id="contact" class="col col-12 pad-xl-bottom">
+				<h2 class="no-pad-bottom no-margin-bottom">Contact</h2>
 				<section class="container pad-xl-bottom">
-					<h2 class="no-pad-bottom no-margin-bottom">Contact</h2>
-					
-					<div class="fieldset fieldset-xs-8 fieldset-lg-5">
+					<div class="fieldset border-primary-300">
 						<div class="field-group width-xs-8">
 							<label for="Name">Name</label>
 							<input type="text" name="Name" class="input input-text">
@@ -58,7 +57,7 @@
 							<input type="email" name="email" class="input input-email">
 						</div>
 					</div>
-					<div class="fieldset fieldset-xs-8 fieldset-lg-7">
+					<div class="fieldset border-accent-300">
 						<div class="field-group width-xs-8">
 							<label for="Message">Message</label>
 							<textarea name="Message" id="message" class="input input-textarea"></textarea>

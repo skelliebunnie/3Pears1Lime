@@ -43,15 +43,20 @@ header {
 
 .column > .col { padding: 0; }
 
-.container { position: relative; }
+.container { 
+	position: relative;
+	max-width: 100vw;
+	width: 480px;
+}
 
 h2 { font-size: 3.5rem; }
 
 $fes-height: 22rem;
 
 #find, #explore, #submit {
-	position: relative;
-	display: block;
+	// position: relative;
+	display: flex;
+	flex-flow: row nowrap;
 	content: "";
 	height: $fes-height;
 	padding: 0;
@@ -88,7 +93,10 @@ $fes-height: 22rem;
 }
 
 #find {
+	justify-content: left;
+
 	$color: getColor('primary-500');
+
 	h2 {
 		background: headerGradient(right, $color);
 		color: getContrast($color);
@@ -98,6 +106,7 @@ $fes-height: 22rem;
 }
 
 #explore {
+	justify-content: right;
 	$color: getColor('accent-400');
 
 	h2 {
@@ -111,6 +120,7 @@ $fes-height: 22rem;
 }
 
 #submit {
+	justify-content: left;
 	$color: getColor('secondary-400');
 	margin-bottom: 1rem;
 
@@ -123,6 +133,13 @@ $fes-height: 22rem;
 
 }
 
+#cocktails,
+#contact {
+	.container {
+		margin: 0 auto;
+	}
+}
+
 #cocktails {
 	$color: getColor('tertiary-500');
 	background-color: $color;
@@ -130,10 +147,15 @@ $fes-height: 22rem;
 	text-align: center;
 	margin-top: 6rem;
 
+	.container {
+		max-height: 20rem;
+		margin: 0 auto;
+	}
+
 	img {
 		position: absolute;
-		top: -47%;
-		left: 33%;
+		top: -64%;
+		left: 37%;
 		margin: 0 auto;
 		max-width: 33%;
 		height: auto;
@@ -141,8 +163,8 @@ $fes-height: 22rem;
 
 	h3 { 
 		font-family: map-get($fonts, 'title'); 
-		font-size: 6rem;
-		padding-top: 2.75rem;
+		font-size: 3rem;
+		padding-top: 3.25rem;
 	}
 }
 
@@ -150,6 +172,14 @@ $fes-height: 22rem;
 	background-color: getColor('neutral-700');
 	color: getContrast(getColor('neutral-700'));
 	text-align: center;
+
+	.fieldset {
+		flex-flow: column nowrap;
+	}
+
+	.field-group {
+		width: 80%;
+	}
 }
 
 footer.copyright {
@@ -158,7 +188,7 @@ footer.copyright {
 	text-align: center;
 }
 
-@media all and (min-width: 768px) {
+@include mq($from: 'tablet') {
 	#pears-lime {
 		display: inline-block;
 		margin: 0 auto;
@@ -168,5 +198,37 @@ footer.copyright {
 			max-height: 8rem;
 			width: auto;
 		}
+	}
+
+	#cocktails {
+		display: flex;
+		flex-flow: column nowrap;
+
+		.container {
+			max-width: 70%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
+@include mq($from: 'mobileLandscape') {
+	#contact .container { 
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#contact .field-group {
+		width: 100%;
+	}
+
+	#contact .fieldset:first-child {
+		padding-top: 1rem;
+	}
+
+	#contact textarea {
+		width: 100%;
+		height: 4rem;
 	}
 }
