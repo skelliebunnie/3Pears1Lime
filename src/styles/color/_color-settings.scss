@@ -25,5 +25,4 @@ $messageColors: (
 
 // quad/quadratic = square tetrad harmony; tetrad/tetradic = rectangular tetrad
 $range: 'static';
-@include palette($color: 'primary', $complement-name: 'complement', $rangeType: $range, $rangeDepth: 9);
-
+@include palette($color: 'primary', $complement-name: 'complement', $rangeType: $range, $rangeDepth: 9, $harmony: 'split');

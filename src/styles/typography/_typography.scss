@@ -5,6 +5,8 @@ body {
 	font-family: getVal('copy', $fonts);
 	color: getVal('text-dark', $defaults);
 	letter-spacing: 1px;
+	font-size: getVal('md', $font-sizes);
+	line-height: getVal('sm', $line-heights);
 }
 
 a {
@@ -29,7 +31,7 @@ p {
 	$margin: getVal('margin', $defaults);
 	padding: 0 1em $pad;
 	margin: 0;
-	line-height: 1.3rem;
+	line-height: getVal('md', $line-heights);
 }
 
 code, samp, pre, .mono {

@@ -1,0 +1,109 @@
+/* ====================================
+		MODULES: MEDIA QUERIES
+ * ==================================== */
+/* ====================================
+		XS - mobile (>= 414px)
+ * ==================================== */
+@include mq($from: 'mobile') {
+	@for $i from 1 through $max-columns {
+		$rowcolwidth: nth($rowcolwidths, $i);
+		$colwidth: nth($colwidths, $i);
+
+		@if($i < 6) { $rowcolwidth: $rowcolwidth * 2; }
+		@if($i < 6) { $colwidth: $colwidth * 2; }
+
+		.fieldset#{$i}-xs > .form-group {
+			flex: 1 0 $rowcolwidth;
+			max-width: $rowcolwidth;
+		}
+
+		.fieldset-xs-#{$i} { max-width: $colwidth; }
+
+		.width-xs-#{$i} {
+			flex: 1 0 $colwidth;
+			max-width: $colwidth;
+		}
+	}
+}
+
+/* ====================================
+		SM - mobileLandscape (>=736px)
+ * ==================================== */
+@include mq($from: 'mobileLandscape') {
+	@for $i from 1 through $max-columns {
+		$rowcolwidth: nth($rowcolwidths, $i);
+		$colwidth: nth($colwidths, $i);
+
+		@if($i < 6) { $rowcolwidth: $rowcolwidth * 2; }
+		@if($i < 6) { $colwidth: $colwidth * 2; }
+
+		.fieldset#{$i}-sm > .form-group {
+			flex: 1 0 $rowcolwidth;
+			max-width: $rowcolwidth;
+		}
+
+		.fieldset-sm-#{$i} { max-width: $colwidth; }
+
+		.width-sm-#{$i} {
+			flex: 1 0 $colwidth;
+			max-width: $colwidth;
+		}
+	}
+}
+
+/* ====================================
+		MD - tablet (>=1024px)
+ * ==================================== */
+@include mq($from: 'tablet') {
+	@for $i from 1 through $max-columns {
+		.fieldset#{$i}-md > .form-group {
+			flex: 1 0 nth($rowcolwidths, $i);
+			max-width: nth($rowcolwidths, $i);
+		}
+
+		.fieldset-md-#{$i} { max-width: nth($colwidths, $i); }
+
+		.width-md-#{$i} {
+			flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+		}
+	}
+}
+
+/* ====================================
+		LG - desktop (>= 1280px)
+ * ==================================== */
+@include mq($from: 'desktop') {
+	@for $i from 1 through $max-columns {
+		.fieldset#{$i}-lg > .form-group {
+			flex: 1 0 nth($rowcolwidths, $i);
+			max-width: nth($rowcolwidths, $i);
+		}
+
+		.fieldset-lg-#{$i} { max-width: nth($colwidths, $i); }
+
+		.width-lg-#{$i} {
+			flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+		}
+	}
+}
+
+/* ====================================
+		XL - widescreen (>= 1920)
+ * ==================================== */
+@include mq($from: 'wide') {
+	@for $i from 1 through $max-columns {
+		.fieldset#{$i}-xl > .form-group {
+			flex: 1 0 nth($rowcolwidths, $i);
+			max-width: nth($rowcolwidths, $i);
+		}
+
+		.fieldset-xl-#{$i} { max-width: nth($colwidths, $i); }
+
+		.width-xl-#{$i} {
+			flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+		}
+	}
+}

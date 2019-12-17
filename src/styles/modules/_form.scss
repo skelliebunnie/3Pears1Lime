@@ -1,3 +1,6 @@
+/* ====================================
+		MODULE: FORM
+ * ==================================== */
 form,
 .form {
 	flex: 1;
@@ -19,22 +22,25 @@ form,
 	margin: 0;
 }
 
-.form-group {
+.field-group {
 	@extend %col;
 	position: relative;
-	padding: 1rem;
-	padding-top: 1.5rem;
+	padding: 0.5rem;
+	padding-top: 1rem;
 	margin: 0;
 }
 
 @for $i from 1 through $max-columns {
+	// rowcolwidths & colwidths are lists built from max-columns (default: 12)
+	// in order to assume mobile-sizing first, divide by 2 (default result: 6)
+
 	.fieldset#{$i} > .form-group {
-		flex: 1 0 nth($rowcolwidths, $i);
-		max-width: nth($rowcolwidths, $i);
+		flex: 1 0 (nth($rowcolwidths, $i) / 2);
+		max-width: (nth($rowcolwidths, $i) / 2);
 	}
 
 	.width-#{$i} {
-		flex: 1 0 nth($colwidths, $i);
-		max-width: nth($colwidths, $i);
+		flex: 1 0 (nth($colwidths, $i) / 2);
+		max-width: (nth($colwidths, $i) / 2);
 	}
 }

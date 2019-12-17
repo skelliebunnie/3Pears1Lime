@@ -155,6 +155,8 @@ $colors: map-values($palette);
 
 .center { margin: 0 auto; }
 
+.center-contents > * { margin: 0 auto; }
+
 /* ====================================
 		HELPERS: PADDING
  * ==================================== */
@@ -164,22 +166,39 @@ $colors: map-values($palette);
 	.pad-#{$position} {
 		padding-#{$position}: $default-pad;
 	}
+	.no-pad-#{$position} {
+		padding-#{$position}: 0 !important;
+	}
 }
 
 @each $position in $other {
-	.pad-#{$position} {
-		@if $position == 'around' { 
-			padding: $default-pad; 
+	
+		@if $position == 'around' {
+			.pad-#{$position} { padding: $default-pad; }
+			.no-pad-#{$position} { padding: 0 !important; }
 		}
 		@if $position == 'x' { 
-			padding-left: $default-pad;
-			padding-right: $default-pad;
+			.pad-#{$position} {
+				padding-left: $default-pad;
+				padding-right: $default-pad;
+			}
+
+			.no-pad-#{$position} {
+				padding-left: 0 !important;
+				padding-right: 0 !important;
+			}
 		}
 		@if $position == 'y' {
-			padding-top: $default-pad;
-			padding-bottom: $default-pad;
+			.pad-#{$position} {
+				padding-top: $default-pad;
+				padding-bottom: $default-pad;
+			}
+
+			.no-pad-#{$position} {
+				padding-top: 0 important;
+				padding-bottom: 0 important;
+			}
 		}
-	}
 }
 
 @each $size,$pad in $padding-sizes {
@@ -213,20 +232,35 @@ $colors: map-values($palette);
 
 @each $position in $border-sides {
 	.margin-#{$position} {
-		padding-#{$position}: $default-margin;
+		margin-#{$position}: $default-margin;
 	}
 }
 
 @each $position in $other {
-	.margin-#{$position} {
-		@if $position == 'around' { padding: $default-margin; }
-		@if $position == 'x' { 
-			padding-left: $default-margin;
-			padding-right: $default-margin;
+	@if $position == 'around' { 
+		.margin-#{$position} { margin: $default-margin; }
+		.no-margin-#{$position} { margin: 0 !important; }
+	}
+	@if $position == 'x' { 
+		.margin-#{$position} {
+			margin-left: $default-margin;
+			margin-right: $default-margin;
 		}
-		@if $position == 'y' {
-			padding-top: $default-margin;
-			padding-bottom: $default-margin;
+
+		.no-margin-#{$position} {
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+	}
+	@if $position == 'y' {
+		.margin-#{$position} {
+			margin-top: $default-margin;
+			margin-bottom: $default-margin;
+		}
+
+		.no-margin-#{$position} {
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
 		}
 	}
 }

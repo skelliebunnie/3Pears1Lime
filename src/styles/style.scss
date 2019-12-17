@@ -1,3 +1,7 @@
+// =============================================
+//	STYLE.SCSS
+// =============================================
+
 @import "global";
 
 @import "settings";
@@ -9,19 +13,19 @@
 				'global/helpers';
 
 @import "grid/grid",
-			  "grid/mq";
+			  "grid/mq"; // media queries
 
 @import "typography/typography",
 				"typography/headers",
 				"typography/titles",
-				"typography/mq";
+				"typography/mq"; // media queries
 
-/* 
-	COMPONENTS 
-	- Small "pieces", e.g. button, code, pre; also table
-	- Only items that can be used in various contexts
-	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
-*/
+// =============================================
+//	COMPONENTS 
+//	- Small "pieces", e.g. button, code, pre; also table
+//	- Only items that can be used in various contexts
+//	- Grouped into: Inline, Input, Media, Messaging, Table, Lists
+// =============================================
 @import "components/mixins",
 				"components/hr",
 				"components/shapes",
@@ -33,28 +37,30 @@
 				"components/lists",
 				"components/media",
 				"components/messaging",
-				"components/table";
+				"components/table",
+				"components/mq"; // media queries
 
-/* 
-	MODULES 
-	- Collections of pieces (not always Components)
-	- 'Blocks' that contain multiple elements, e.g. figure, form
-	- Grouped into: Blocks, Block-Lists, Nav, Form, Figure
-*/
+// =============================================
+//	MODULES 
+//	- Collections of pieces (not always Components)
+//	- 'Blocks' that contain multiple elements, e.g. figure, form
+//	- Grouped into: Blocks, Block-Lists, Nav, Form, Figure
+// =============================================
 @import "modules/figure",
 				"modules/gallery",
 				"modules/form",
 				"modules/module-lists",
 				"modules/nav",
 				"modules/panel",
-				"modules/hero";
+				"modules/hero",
+				"modules/mq"; // media queries
 
-/* LAYOUT MODULES */
+// ========== Layout Modules ===================
 @import	"modules/site-header";
 
-/*
-	LAYOUT
-*/	
+// =============================================
+// 	LAYOUT
+// =============================================	
 @import "layout/page-container";
 
 // has to be imported after everything else or
@@ -62,4 +68,4 @@
 // by corresponding definitions in subsequent classes
 @import "settings-helpers";
 
-@import "layout/custom";
+@import "custom";
