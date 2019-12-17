@@ -1,0 +1,20 @@
+/* ====================================
+		COMPONENT: LIST
+		ul, ol, dl
+ * ==================================== */
+
+ dl {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+dt {
+	max-width: 10%;
+}
+
+dt,
+dd {
+	flex: 1;
+}

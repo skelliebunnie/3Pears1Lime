@@ -1,0 +1,116 @@
+body {
+	background-color: getColor('neutral-100');
+	color: getContrast(getColor('neutral-100'));
+}
+
+header {
+	background-color: getColor('neutral-700');
+	color: getContrast(getColor('neutral-700'));
+	background: url('../images/headerBG.jpg');
+	background-size: cover;
+	background-position: bottom;
+	max-height: 20rem;
+	overflow: hidden;
+	padding-top: 10rem;
+}
+
+#pears-lime {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+	& img {
+		max-height: 8rem;
+		width: auto;
+	}
+
+	& img:first-child {
+		margin: 0 auto;
+	}
+}
+
+#page-container {
+	grid-template-rows: 2fr 5fr 3fr;
+}
+
+.column > .col { padding: 0; }
+
+h2 { font-size: 3.5rem; }
+
+#find, #explore, #submit {
+	position: relative;
+	display: block;
+	content: "";
+	min-height: 19rem;
+
+	.container {
+		position: relative;
+		// margin-top: 3rem;
+	}
+
+	h2 {
+		position: absolute;
+		left: 0;
+		z-index: 10;
+		margin-left: 0;
+		margin-top: 4rem;
+		padding-left: 1rem;
+		max-width: 80%;
+
+		span { margin-left: 5.5rem; }
+	}
+
+	img {
+		position: absolute;
+		right: 0;
+		z-index: -10;
+		top: -16%;
+		max-height: 19rem;
+		width: auto;
+		margin-right: 1rem;
+	}
+
+}
+
+#find {
+	h2 {
+		background-color: getColor('accent-400');
+		color: getContrast(getColor('accent-400'));
+	}
+}
+
+#explore {
+	background-color: getColor('primary-700');
+	color: getContrast(getColor('primary-700'));
+	text-align: right;
+}
+
+#submit {
+	background-color: getColor('secondary-400');
+	color: getContrast(getColor('secondary-400'));
+}
+
+#cocktails {
+	background-color: getColor('tertiary-400');
+	color: getContrast(getColor('tertiary-400'));
+	text-align: center;
+
+	h3 { font-family: map-get($fonts, 'title'); }
+}
+
+#contact {
+	background-color: getColor('neutral-700');
+	color: getContrast(getColor('neutral-700'));
+	text-align: center;
+}
+
+footer.copyright {
+	background-color: getColor('neutral-800');
+	color: getContrast(getColor('neutral-800'));
+	text-align: center;
+}
+
+main.column, aside.column,
+main .col + .col {
+	margin-top: 2rem;
+}

@@ -1,0 +1,62 @@
+/* ====================================
+		GRID: PLACEHOLDERS
+ * ==================================== */
+@import "variables";
+
+%row {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: stretch;
+	align-items: start;
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+%column {
+	margin: 0;
+	padding: 0;
+	min-width: 100vw;
+	max-width: 100vw;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: stretch;
+	justify-content: stretch;
+}
+
+%col {
+	flex: 1;
+	width: 100%;
+	padding: 1rem;
+}
+
+%container {
+	flex: 1 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 0;
+}
+
+@for $i from 1 through $max-columns {
+	%row#{$i} > .col,
+	%row#{$i} > .container {
+		flex: 1 0 nth($rowcolwidths, $i);
+		max-width: nth($rowcolwidths, $i);
+	}
+
+	%col-#{$i},
+	%container-#{$i} {
+		flex: 1 0 nth($colwidths, $i);
+		max-width: nth($colwidths, $i);
+	}
+
+	.row-vertical %col-#{$i},
+	.row-vertical %container-#{$i} {
+		flex: 1 0 100%;
+		max-height: nth($colwidths, $i);
+	}
+}

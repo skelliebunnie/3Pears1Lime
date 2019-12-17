@@ -1,0 +1,40 @@
+form,
+.form {
+	flex: 1;
+	padding: 1rem;
+	margin: 1rem;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+	position: relative;
+}
+
+.fieldset {
+	@extend %row;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 0;
+	margin: 0;
+}
+
+.form-group {
+	@extend %col;
+	position: relative;
+	padding: 1rem;
+	padding-top: 1.5rem;
+	margin: 0;
+}
+
+@for $i from 1 through $max-columns {
+	.fieldset#{$i} > .form-group {
+		flex: 1 0 nth($rowcolwidths, $i);
+		max-width: nth($rowcolwidths, $i);
+	}
+
+	.width-#{$i} {
+		flex: 1 0 nth($colwidths, $i);
+		max-width: nth($colwidths, $i);
+	}
+}

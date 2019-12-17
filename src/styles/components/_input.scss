@@ -1,0 +1,98 @@
+/* ====================================
+		COMPONENT: INPUT
+		label, keygen, legend;
+		text, email, password, url, tel,
+		number, color, file, image;
+		datetime-local, month, date, time, week;
+		textarea, select, checkbox, radio;
+		datalist, meter, progress, range;
+		reset; search
+		submit
+ * ==================================== */
+
+/* ====================================
+		COMPONENT: INPUT: text, textarea,
+		email, password, tel, number, url
+ * ==================================== */
+.input, textarea {
+	flex: 1 0 100%;
+	width: 100%;
+	border: 0;
+	outline: 0;
+
+	& + &,
+	.placeholder + & {
+		margin-top: 1rem;
+	}
+}
+
+.input {
+	border-bottom: 1px solid tomato;
+	transition: all 0.2s ease-in;
+	padding: 0.75rem;
+	background-color: #eee;
+
+	&:active,
+	&:focus {
+		background-color: #fefefe;
+	}
+
+	&::placeholder {
+		color: tomato;
+		opacity: 0.75;
+	}
+
+	&:placeholder-shown + .placeholder {
+		opacity: 0;
+		transform: translateY(1rem);
+	}
+}
+
+.input-textarea {
+	padding: 0.5rem;
+	border-radius: 0.15rem;
+	border: 1px solid tomato;
+	background-color: #eee;
+
+	&:active,
+	&:focus {
+		background-color: #fefefe;
+	}
+}
+
+.placeholder {
+	position: absolute;
+	top: 0;
+	font-size: small;
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.2s ease-out;
+	z-index: -1;
+	padding: 0;
+	margin: 0 0 0.5rem;
+	color: tomato;
+}
+
+input[type="checkbox"] {
+	flex: 0;
+	width: auto;
+	-webkit-appearance: none;
+	background-color: #bbb;
+	padding: 0.75rem;
+	outline: none;
+	border-radius: 0.14rem;
+	position: relative;
+}
+
+input[type="checkbox"]:checked {
+	box-shadow: inset 1px 1px 3px rgba(0,0,0,0.25);
+}
+
+input[type="checkbox"]:checked:after {
+	content: '\2714';
+	font-size: 2rem;
+	position: absolute;
+	bottom: -6px;
+	left: -1px;
+	color: forestgreen;
+}

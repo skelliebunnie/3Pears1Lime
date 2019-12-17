@@ -1,0 +1,24 @@
+/* ====================================
+		MODULE: SITE-HEADER
+ * ==================================== */
+.site-header {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	max-width: 100%;
+	text-align: center;
+	@include fullBgImage($url: $site-header--bg-image, $position: $site-header--bg-position);
+	@include overlay();
+
+	@include mq($from: 'tablet') {
+		text-align: $site-header--text-position;
+	}
+}
+
+.site-title a {
+	color: $site-title-a--color;
+}
+
+.sub-title {
+	font-weight: 400;
+}

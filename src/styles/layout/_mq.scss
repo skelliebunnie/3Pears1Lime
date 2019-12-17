@@ -1,0 +1,209 @@
+/* ====================================
+		LAYOUT: MEDIA QUERIES: PAGE CONTAINER
+ * ==================================== */
+
+#page-container {
+	@include mq($from: "tablet") {
+		grid-template-rows: min-content min-content 1fr min-content;
+		grid-template-columns: minmax(min-content, 15%) 1fr;
+		grid-template-areas:
+		"site-header site-header"
+		"site-sidebar site-nav"
+		"site-sidebar site-content"
+		"site-footer site-footer";
+
+		&.site-nav-none {
+			grid-template-rows: min-content 1fr min-content;
+			grid-template-areas:
+				"site-header site-header"
+				"site-sidebar site-content"
+				"site-footer site-footer";
+
+			 .site-header + .site-nav {
+				display: none;
+			}
+		}
+
+		&.sidebar-none {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"site-header"
+				"site-nav"
+				"site-content"
+				"site-footer";
+
+			& .site-sidebar {
+				display: none;
+			}
+		}
+
+		&.site-nav-none.sidebar-none {
+			grid-template-areas:
+				"site-header"
+				"site-content"
+				"site-footer";
+		}
+
+		&.vertical {
+			grid-template-columns: 1fr;
+			grid-template-areas:
+				"site-header"
+				"site-nav"
+				"site-content"
+				"site-sidebar"
+				"site-footer";
+		}
+
+		&.vertical.site-nav-none {
+			grid-template-areas:
+				"site-header"
+				"site-content"
+				"site-sidebar"
+				"site-footer";
+		}
+
+		&.sidebar-fullheight {
+			grid-template-areas:
+				"site-sidebar site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-sidebar site-footer";
+
+			&.site-nav-none {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
+		}
+
+		&.sidebar-to-header {
+			grid-template-areas:
+				"site-sidebar site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-footer site-footer";
+			&.site-nav-none {
+				grid-template-areas:
+					"site-sidebar site-header"
+					"site-sidebar site-content"
+					"site-footer site-footer";
+			}
+		}
+
+		&.sidebar-to-footer {
+			grid-template-areas:
+				"site-header site-header"
+				"site-sidebar site-nav"
+				"site-sidebar site-content"
+				"site-sidebar site-footer";
+			&.site-nav-none {
+				grid-template-areas:
+					"site-header site-header"
+					"site-sidebar site-content"
+					"site-sidebar site-footer";
+			}
+		}
+
+		&.sidebar-nav {
+			grid-template-areas:
+				"site-header site-header"
+				"site-nav site-content"
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-nav site-header"
+					"site-nav site-content"
+					"site-nav site-footer";
+			}
+
+			&.to-header {
+				grid-template-areas:
+					"site-nav site-header"
+					"site-nav site-content"
+					"site-footer site-footer";
+			}
+
+			&.to-footer {
+				grid-template-areas:
+					"site-header site-header"
+					"site-nav site-content"
+					"site-nav site-footer";
+			}
+
+			&.sidebar-right {
+				grid-template-areas:
+					"site-header site-header"
+					"site-content site-nav"
+					"site-footer site-footer";
+
+				&.sidebar-fullheight {
+					grid-template-areas:
+						"site-header site-nav"
+						"site-content site-nav"
+						"site-footer site-nav";
+				}
+
+				&.to-header {
+					grid-template-areas:
+						"site-header site-nav"
+						"site-content site-nav"
+						"site-footer site-footer";
+				}
+
+				&.to-footer {
+					grid-template-areas:
+						"site-header site-header"
+						"site-content site-nav"
+						"site-footer site-nav";
+				}
+			}
+		}
+
+		&.sidebar-right {
+			grid-template-columns: 1fr min-content;
+			grid-template-areas:
+				"site-header site-header"
+				"site-nav site-sidebar"
+				"site-content site-sidebar"
+				"site-footer site-footer";
+
+			&.sidebar-fullheight {
+				grid-template-areas:
+					"site-header site-sidebar"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-sidebar";
+			}
+
+			&.to-header {
+				grid-template-areas:
+					"site-header site-sidebar"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-footer";
+			}
+
+			&.to-footer {
+				grid-template-areas:
+					"site-header site-header"
+					"site-nav site-sidebar"
+					"site-content site-sidebar"
+					"site-footer site-sidebar";
+			}
+		}
+	}
+
+	.site-header {
+		text-align: left;
+	}
+
+	@include mq($from: "desktop") {
+		grid-template-columns: minmax(min-content, 15%) 1fr;
+
+		&.sidebar-right {
+			grid-template-columns: 1fr max-content;
+		}
+	}
+}

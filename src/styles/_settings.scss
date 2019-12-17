@@ -1,0 +1,141 @@
+//* ====================================
+//		SETTINGS
+//	For defining VARIABLES [& placeholders?] (only)!!
+//	Do NOT define any classes, &c.
+//	Otherwise they'll be repeated on every import
+//* ==================================== */
+// if using a different name for the map, update @include palette();
+@import "color/color-settings";
+
+/*
+	Required only by Color-Charts.scss (for framework demo)
+ */
+$clr: 		'primary'; // 'starting' color
+$h: 			'analogous'; // color harmony
+$clr400: 	'primary'; // 'starting' color name
+$r:				'static'; // color range type for the top examples on the demo 'colors' page.
+
+//* ====================================
+//		FONTS & TYPOGRAPHY
+//* ====================================
+@import url('https://fonts.googleapis.com/css?family=Delius|Open+Sans:400,900|Assistant:400,700|Inconsolata&display=swap');
+$fonts: (
+	'title': unquote("'Delius', sans-serif"),
+	'copy': unquote("'Open Sans', sans-serif"),
+	'heading': unquote("'Assistant', sans-serif"),
+	'mono': unquote("'Inconsolata', monospace")
+) !default;
+
+$font-sizes: (
+	'xs': 0.5rem,
+	'sm': 0.8rem,
+	'md': 1rem,
+	'lg': 1.3rem,
+	'xl': 2rem
+) !default;
+
+$heading-color: getColor('accent-500') !default;
+$a--color: getColor('tea-700') !default;
+$a-hover--color: getColor('accent-700') !default;
+
+//* ====================================
+//		GENERAL DEFAULTS
+//* ====================================
+$scale: 0;
+@if $range == 'default' or $range == 'tintshade' {
+	$scale: 65;
+} @else {
+	$scale: 25;
+}
+
+$defaults: (
+	'padding': 0.75rem,
+	'margin': 0.75rem,
+	'gutter': 0.5rem,
+	'border-width': 1px,
+	'color-light': scale-color(getColor('neutral-100'), $lightness:  $scale),
+	'color-dark': scale-color(getColor('neutral-700'), $lightness: -($scale))
+) !default;
+
+$default-pad: map-get($defaults, 'padding');
+$default-margin: map-get($defaults, 'margin');
+$padding-sizes: (
+	'xs': $default-pad * 0.5,
+	'sm': $default-pad * 0.8,
+	'md': $default-pad,
+	'lg': $default-pad * 1.5,
+	'xl': $default-pad * 2
+) !default;
+
+$margin-sizes: (
+	'xs': $default-margin * 0.5,
+	'sm': $default-margin * 0.8,
+	'md': $default-margin,
+	'lg': $default-margin * 1.5,
+	'xl': $default-margin * 2
+) !default;
+
+$hr-sizes: (
+	'xs': 1px,
+	'sm': 2px,
+	'md': 3px,
+	'lg': 5px,
+	'xl': 7px
+) !default;
+
+//* ====================================
+//		GRID & MEDIA-QUERY BREAKPOINTS
+//* ====================================
+$mq-breakpoints: (
+	'mobile': 414px,
+	'mobileLandscape': 736px,
+	'tablet': 1024px,
+	'desktop': 1280px,
+	'wide': 1920px
+) !default;
+
+$max-columns: 12 !default;
+//$mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide) !default;
+
+//* ====================================
+//		SITE HEADER
+//* ====================================
+// for screen widths >= 1024; < 1024 == center;
+$site-header--text-position: left;
+
+$site-header--bg-color: getColor('primary', $coreColors) !default;
+$site-header--bg-image: '../images/succulents.jpg' !default;
+$site-header--bg-position: top !default;
+
+$site-title--font: getFont('title') !default;
+$site-title-a--color: getColor('accent-100') !default;
+
+//* ====================================
+//		SITE-NAV
+//* ====================================
+$site-nav--bg-color: getColor('accent-700') !default;
+$site-nav-hover--bg-color: getColor('primary-analogous3-400') !default;
+$site-nav-active--bg-color: getColor('primary-analogous3-200') !default;
+
+$site-nav-currentpg--bg-color: getColor('accent-400') !default;
+
+/* NAV, GENERAL */
+$nav--color: getColor('tea-400');
+$nav-hover--color: getColor('accent-400');
+
+//* ====================================
+//		TABLE
+//* ====================================
+$table-thead-th--bg-color: getColor('accent-700') !default;
+$table-tbody-th--bg-color: getColor('accent-100') !default;
+$table-tfoot-th--bg-color: getColor('accent-400') !default;
+
+// ZEBRA STRIPES
+$table-striped--bg-color: getColor('accent-100') !default;
+
+// BORDERS
+$table--border-color: getColor('accent-700') !default;
+
+// top, bottom; NON-STANDARD: left, right, top-outside, bottom-outside;
+$caption--caption-side: bottom;
+$caption--text-align: right;
