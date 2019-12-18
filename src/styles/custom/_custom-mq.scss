@@ -1,0 +1,127 @@
+/* ====================================
+		MODULES: MEDIA QUERIES
+ * ==================================== */
+
+/* ====================================
+		XS - mobile (>= 414px)
+ * ==================================== */
+@include mq($from: 'mobile') {
+	@for $i from 1 through $max-columns {
+		$colwidth: nth($colwidths, $i);
+
+		@if($i < 6) { $colwidth: $colwidth * 2; }
+
+		.width-xs-#{$i} {
+			// flex: 1 0 $colwidth;
+			max-width: $colwidth;
+			min-width: $colwidth;
+		}
+	}
+
+	article:nth-child(1) { margin-top: 2rem; }
+
+	main article + article { margin-top: 7rem; }
+}
+
+/* ====================================
+		SM - mobileLandscape (>=736px)
+ * ==================================== */
+@include mq($from: 'mobileLandscape') {
+	@for $i from 1 through $max-columns {
+		$colwidth: nth($colwidths, $i);
+
+		@if($i < 6) { $colwidth: $colwidth * 2; }
+
+		.width-sm-#{$i} {
+			// flex: 1 0 $colwidth;
+			max-width: $colwidth;
+			min-width: $colwidth;
+		}
+	}
+
+	textarea {
+		height: 10rem;
+	}
+
+	#explore h2 { padding-left: 7.5rem; }
+
+	#cocktails {
+		margin-top: 12rem;
+	}
+
+	#contact .container { 
+		width: 90vw;
+		display: grid;
+		grid-template-columns: 1fr 1.5fr;
+	}
+
+	#contact .field-group {
+		width: 100%;
+	}
+
+	#contact .fieldset:first-child {
+		padding-bottom: 2rem;
+		justify-content: flex-start;
+	}
+}
+
+/* ====================================
+		MD - tablet (>=1024px)
+ * ==================================== */
+@include mq($from: 'tablet') {
+	@for $i from 1 through $max-columns {
+		.width-md-#{$i} {
+			// flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+			min-width: nth($colwidths, $i);
+		}
+	}
+
+	#pears-lime {
+		display: inline-block;
+		margin: 0 auto;
+		padding: 0;
+
+		& img {
+			max-height: 8rem;
+			width: auto;
+		}
+	}
+
+	#cocktails {
+		display: flex;
+		flex-flow: column nowrap;
+
+		.container {
+			max-width: 70%;
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
+/* ====================================
+		LG - desktop (>= 1280px)
+ * ==================================== */
+@include mq($from: 'desktop') {
+	@for $i from 1 through $max-columns {
+		.width-lg-#{$i} {
+			// flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+			min-width: nth($colwidths, $i);
+		}
+	}
+}
+
+/* ====================================
+		XL - widescreen (>= 1920)
+ * ==================================== */
+@include mq($from: 'wide') {
+	@for $i from 1 through $max-columns {
+		.width-xl-#{$i} {
+			// flex: 1 0 nth($colwidths, $i);
+			max-width: nth($colwidths, $i);
+			min-width: nth($colwidths, $i);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+body {
+	background-color: $body--bg-color;
+	color: getContrast($body--bg-color);
+}
+
+#page-container {
+	grid-template-rows: 3.5fr 2fr;
+	overflow: hidden;
+
+	& main { margin-top: 24rem; }
+}

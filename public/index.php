@@ -11,33 +11,47 @@
 				<h1 class="site-title text-center">3 Pears <span class="ampersand">&amp;</span> A Lime</h1>
 			</section>
 			<section id="pears-lime" class="col no-pad no-margin">
-				<img src="images/3 Pears 1 Lime - Header Fruit.png" alt="">
+				<img src="images/pears + limes/3 Pears 1 Lime - Header Fruit.png" alt="">
 			</section>
 		</header>
 		<main class="column">
 			<article id="find" class="col col-md-6">
 				<section class="container">
-					<h2>Find a <span>Recipe</span></h2>
-					<img src="images/FancySalad.png" alt="">
+					<h2>Find a <br><span>Recipe</span></h2>
+					<div class="image-list image-list--right">
+						<img src="images/dishes/FancySalad.png" alt="">
+						<img src="images/dishes/zach-ward--01.png" alt="">
+						<img src="images/dishes/Fancy Salad 2.png" alt="">
+					</div>
 				</section>
 			</article>
 			<article id="explore" class="col col-md-6">
 				<section class="container">
-					<h2>Explore <span>Cooking</span></h2>
-					<img src="images/pancakes.png" alt="">
+					<h2>Explore <br><span>Cooking</span></h2>
+					<div class="image-list image-list--left">
+						<img src="images/dishes/louis-hansel-00.png" alt="">
+						<img src="images/dishes/brandon-morgan--01.png" alt="">
+						<img src="images/dishes/shawn-ang--00.png" alt="">
+					</div>
 				</section>
 			</article>
 			<article id="submit" class="col col-md-6">
 				<section class="container">
-					<h2>Submit a <span>Recipe</span></h2>
-					<img src="images/Fancy Salad 2.png" alt="">
+					<h2>Submit a <br><span>Recipe</span></h2>
+					<div class="image-list image-list--right">
+						<img src="images/dishes/alfred-rowe--00.png" alt="">
+						<img src="images/dishes/alexander-ross--00.png" alt="">
+						<img src="images/dishes/nirzar-pangarkar--00.png" alt="">
+					</div>
 				</section>
 			</article>
 		</main>
 		<aside class="column">
 			<article id="cocktails" class="col">
 				<section class="container">
-					<img src="images/Lime Slice.png" alt="">
+					<div class="image-container">
+						<img src="images/pears + limes/Lime Slice.png" alt="">
+					</div>
 					<h3>Cocktails</h3>
 				</section>
 				<section class="container">
@@ -68,7 +82,7 @@
 		</aside>
 		<footer class="row copyright">
 			<section class="col col-12">
-				<p>Copyright &copy; 2019 <strong>3 Pears & A Lime</strong></p>
+				<p>Copyright &copy; <?php date('Y'); ?> <strong>3 Pears & A Lime</strong></p>
 			</section>
 		</footer>
 	</div>

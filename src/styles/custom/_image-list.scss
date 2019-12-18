@@ -1,0 +1,42 @@
+.image-list {
+	position: absolute;
+	z-index: -10;
+	height: $main-sections--height;
+	width: 480px;
+
+	img { 
+		position: absolute;
+		height: $main-sections--height; 
+		width: auto;
+		display: inline-block;
+	}
+
+	&--right {
+		left: $img-offset + 15;
+		
+		$img-offset-increment: $img-offset;
+		@for $i from 2 through 6 {
+			& img:nth-child(#{$i}) {
+				@if $i >= 2 { left: $img-offset-increment; }
+				z-index: -20 - $i;
+			}
+			$img-offset-increment: $img-offset-increment * 1.75;
+		}
+	}
+
+	&--left {
+		right: $img-offset;
+		
+		$img-offset-increment: $img-offset;
+		@for $i from 1 through 6 {
+			& img:nth-child(#{$i}) {
+				right: $img-offset-increment;
+
+				z-index: -20 - $i;
+			}
+			$img-offset-increment: $img-offset-increment + 35;
+		}
+	}
+}
+
+#find img:nth-child(2) { transform: rotateZ(-55deg); }

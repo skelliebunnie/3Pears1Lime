@@ -1,0 +1,68 @@
+#find, #explore, #submit {
+	// position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	content: "";
+	height: $main-sections--height;
+	padding: 0;
+
+	h2 {
+		position: absolute;
+		z-index: 10;
+		margin-left: 0;
+		margin-top: 5.5rem;
+		padding: 1rem 1rem 2rem 2rem;
+		min-width: 80%;
+
+		span { margin-left: 6rem; }
+	}
+
+}
+
+#find h2, #submit h2 {
+	left: 0;
+}
+
+#find {
+	justify-content: left;
+
+	$color: getColor('primary-500');
+
+	h2 {
+		background: headerGradient(right, $color);
+		color: getContrast($color);
+	}
+
+}
+
+#explore {
+	justify-content: right;
+	$color: getColor('accent-400');
+
+	h2 {
+		background: headerGradient(left, $color);
+		color: getContrast($color);
+		right: -10px;
+		padding-left: 5.5rem;
+	}
+
+}
+
+#submit {
+	justify-content: left;
+	$color: getColor('secondary-400');
+	margin-bottom: 1rem;
+
+	h2 {
+		background: headerGradient(right, $color);
+		color: getContrast($color);
+	}
+
+}
+
+#cocktails,
+#contact {
+	.container {
+		margin: 0 auto;
+	}
+}

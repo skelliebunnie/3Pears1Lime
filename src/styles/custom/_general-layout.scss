@@ -1,0 +1,15 @@
+.column > .col { padding: 0; }
+
+.container { 
+	position: relative;
+	width: 100vw;
+}
+
+.image-container {
+	width: 100vw;
+
+	& > img {
+		display: block;
+		margin: 0 auto;
+	}
+}
