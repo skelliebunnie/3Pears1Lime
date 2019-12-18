@@ -1,5 +1,12 @@
 $body--bg-color: getColor('neutral-100');
 
+@function headerGradient($direction, $color) {
+	$clr100: getRGBA($color, 100%);
+	$clr0: getRGBA($color, 0%);
+
+	@return linear-gradient( to $direction, $clr100 81%, $clr100 85%, $clr0 85%, $clr0 87%, $clr100 87%, $clr100 91%, $clr0 91%, $clr0 93%, $clr100 93%, $clr100 96%, $clr0 96%, $clr0 98%, $clr100 98%);
+}
+
 body {
 	background-color: $body--bg-color;
 	color: getContrast($body--bg-color);
@@ -37,6 +44,7 @@ header {
 
 #page-container {
 	grid-template-rows: 3.5fr 2fr;
+	overflow: hidden;
 
 	& main { margin-top: 24rem; }
 }
@@ -83,13 +91,6 @@ $fes-height: 22rem;
 
 #find h2, #submit h2 {
 	left: 0;
-}
-
-@function headerGradient($direction, $color) {
-	$clr100: getRGBA($color, 100%);
-	$clr0: getRGBA($color, 0%);
-
-	@return linear-gradient( to $direction, $clr100 81%, $clr100 85%, $clr0 85%, $clr0 87%, $clr100 87%, $clr100 91%, $clr0 91%, $clr0 93%, $clr100 93%, $clr100 96%, $clr0 96%, $clr0 98%, $clr100 98%);
 }
 
 #find {
@@ -213,6 +214,14 @@ footer.copyright {
 }
 
 @include mq($from: 'mobileLandscape') {
+	main article + article {
+		margin-top: 15rem;
+	}
+
+	#cocktails {
+		margin-top: 10rem;
+	}
+
 	#contact .container { 
 		width: 100%;
 		display: grid;
