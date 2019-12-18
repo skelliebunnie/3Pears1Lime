@@ -2736,6 +2736,9 @@ img {
 		reset; search
 		submit
  * ==================================== */
+label, .label {
+	display: inline-block; }
+
 label + .input {
 	margin-top: 1rem; }
 
@@ -11258,6 +11261,9 @@ header {
 	max-width: 100vw;
 	width: 480px; }
 
+#contact .container {
+	width: 100%; }
+
 h2 {
 	font-size: 3.5rem; }
 
@@ -11335,21 +11341,22 @@ h2 {
 	background-color: #819f46;
 	color: #f9f8f8;
 	text-align: center;
-	margin-top: 6rem; }
+	margin-top: 6rem;
+	max-height: 19rem; }
 	#cocktails .container {
 		max-height: 20rem;
 		margin: 0 auto; }
 	#cocktails img {
 		position: absolute;
 		top: -64%;
-		left: 37%;
+		left: 39%;
 		margin: 0 auto;
-		max-width: 33%;
-		height: auto; }
+		height: 100%;
+		width: auto; }
 	#cocktails h3 {
 		font-family: 'Delius', sans-serif;
 		font-size: 3rem;
-		padding-top: 3.25rem; }
+		padding-top: 3rem; }
 
 #contact {
 	background-color: #3a3135;
@@ -11368,7 +11375,148 @@ footer.copyright {
 	color: #f9f8f8;
 	text-align: center; }
 
+/* ====================================
+		MODULES: MEDIA QUERIES
+ * ==================================== */
+/* ====================================
+		XS - mobile (>= 414px)
+ * ==================================== */
+@media (min-width: 25.875em) {
+	.width-xs-1 {
+		max-width: 16.66667%;
+		min-width: 16.66667%; }
+	.width-xs-2 {
+		max-width: 33.33333%;
+		min-width: 33.33333%; }
+	.width-xs-3 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-xs-4 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-xs-5 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-xs-6 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-xs-7 {
+		max-width: 58.33333%;
+		min-width: 58.33333%; }
+	.width-xs-8 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-xs-9 {
+		max-width: 75%;
+		min-width: 75%; }
+	.width-xs-10 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-xs-11 {
+		max-width: 91.66667%;
+		min-width: 91.66667%; }
+	.width-xs-12 {
+		max-width: 100%;
+		min-width: 100%; } }
+
+/* ====================================
+		SM - mobileLandscape (>=736px)
+ * ==================================== */
+@media (min-width: 46em) {
+	.width-sm-1 {
+		max-width: 16.66667%;
+		min-width: 16.66667%; }
+	.width-sm-2 {
+		max-width: 33.33333%;
+		min-width: 33.33333%; }
+	.width-sm-3 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-sm-4 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-sm-5 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-sm-6 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-sm-7 {
+		max-width: 58.33333%;
+		min-width: 58.33333%; }
+	.width-sm-8 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-sm-9 {
+		max-width: 75%;
+		min-width: 75%; }
+	.width-sm-10 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-sm-11 {
+		max-width: 91.66667%;
+		min-width: 91.66667%; }
+	.width-sm-12 {
+		max-width: 100%;
+		min-width: 100%; }
+	textarea {
+		height: 10rem; }
+	main article + article {
+		margin-top: 7rem; }
+	#cocktails {
+		margin-top: 12rem; }
+	#contact .container {
+		width: 90vw;
+		display: grid;
+		grid-template-columns: 1fr 1.5fr; }
+	#contact .field-group {
+		width: 100%; }
+	#contact .fieldset:first-child {
+		padding-bottom: 2rem;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start; } }
+
+/* ====================================
+		MD - tablet (>=1024px)
+ * ==================================== */
 @media (min-width: 64em) {
+	.width-md-1 {
+		max-width: 8.33333%;
+		min-width: 8.33333%; }
+	.width-md-2 {
+		max-width: 16.66667%;
+		min-width: 16.66667%; }
+	.width-md-3 {
+		max-width: 25%;
+		min-width: 25%; }
+	.width-md-4 {
+		max-width: 33.33333%;
+		min-width: 33.33333%; }
+	.width-md-5 {
+		max-width: 41.66667%;
+		min-width: 41.66667%; }
+	.width-md-6 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-md-7 {
+		max-width: 58.33333%;
+		min-width: 58.33333%; }
+	.width-md-8 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-md-9 {
+		max-width: 75%;
+		min-width: 75%; }
+	.width-md-10 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-md-11 {
+		max-width: 91.66667%;
+		min-width: 91.66667%; }
+	.width-md-12 {
+		max-width: 100%;
+		min-width: 100%; }
 	#pears-lime {
 		display: inline-block;
 		margin: 0 auto;
@@ -11389,19 +11537,84 @@ footer.copyright {
 			margin: 0 auto;
 			display: block; } }
 
-@media (min-width: 46em) {
-	main article + article {
-		margin-top: 15rem; }
-	#cocktails {
-		margin-top: 10rem; }
-	#contact .container {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 1fr; }
-	#contact .field-group {
-		width: 100%; }
-	#contact .fieldset:first-child {
-		padding-top: 1rem; }
-	#contact textarea {
-		width: 100%;
-		height: 4rem; } }
+/* ====================================
+		LG - desktop (>= 1280px)
+ * ==================================== */
+@media (min-width: 80em) {
+	.width-lg-1 {
+		max-width: 8.33333%;
+		min-width: 8.33333%; }
+	.width-lg-2 {
+		max-width: 16.66667%;
+		min-width: 16.66667%; }
+	.width-lg-3 {
+		max-width: 25%;
+		min-width: 25%; }
+	.width-lg-4 {
+		max-width: 33.33333%;
+		min-width: 33.33333%; }
+	.width-lg-5 {
+		max-width: 41.66667%;
+		min-width: 41.66667%; }
+	.width-lg-6 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-lg-7 {
+		max-width: 58.33333%;
+		min-width: 58.33333%; }
+	.width-lg-8 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-lg-9 {
+		max-width: 75%;
+		min-width: 75%; }
+	.width-lg-10 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-lg-11 {
+		max-width: 91.66667%;
+		min-width: 91.66667%; }
+	.width-lg-12 {
+		max-width: 100%;
+		min-width: 100%; } }
+
+/* ====================================
+		XL - widescreen (>= 1920)
+ * ==================================== */
+@media (min-width: 120em) {
+	.width-xl-1 {
+		max-width: 8.33333%;
+		min-width: 8.33333%; }
+	.width-xl-2 {
+		max-width: 16.66667%;
+		min-width: 16.66667%; }
+	.width-xl-3 {
+		max-width: 25%;
+		min-width: 25%; }
+	.width-xl-4 {
+		max-width: 33.33333%;
+		min-width: 33.33333%; }
+	.width-xl-5 {
+		max-width: 41.66667%;
+		min-width: 41.66667%; }
+	.width-xl-6 {
+		max-width: 50%;
+		min-width: 50%; }
+	.width-xl-7 {
+		max-width: 58.33333%;
+		min-width: 58.33333%; }
+	.width-xl-8 {
+		max-width: 66.66667%;
+		min-width: 66.66667%; }
+	.width-xl-9 {
+		max-width: 75%;
+		min-width: 75%; }
+	.width-xl-10 {
+		max-width: 83.33333%;
+		min-width: 83.33333%; }
+	.width-xl-11 {
+		max-width: 91.66667%;
+		min-width: 91.66667%; }
+	.width-xl-12 {
+		max-width: 100%;
+		min-width: 100%; } }

@@ -37,7 +37,7 @@
 		<aside class="column">
 			<article id="cocktails" class="col">
 				<section class="container">
-					<img src="images/Lime - cocktails.png" alt="">
+					<img src="images/Lime Slice.png" alt="">
 					<h3>Cocktails</h3>
 				</section>
 				<section class="container">
@@ -47,20 +47,20 @@
 			<article id="contact" class="col col-12 pad-xl-bottom">
 				<h2 class="no-pad-bottom no-margin-bottom">Contact</h2>
 				<section class="container pad-xl-bottom">
-					<div class="fieldset border-primary-300">
-						<div class="field-group width-xs-8">
-							<label for="Name">Name</label>
+					<div class="fieldset">
+						<div class="field-group">
+							<label for="Name" class="label width-xs-12">Name</label>
 							<input type="text" name="Name" class="input input-text">
 						</div>
-						<div class="field-group width-xs-8 np-pad-bottom">
-							<label for="Email">Email</label>
+						<div class="field-group">
+							<label for="Email" class="label width-xs-12">Email</label>
 							<input type="email" name="email" class="input input-email">
 						</div>
 					</div>
-					<div class="fieldset border-accent-300">
-						<div class="field-group width-xs-8">
-							<label for="Message">Message</label>
-							<textarea name="Message" id="message" class="input input-textarea"></textarea>
+					<div class="fieldset">
+						<div class="field-group">
+							<label for="Message" class="label width-xs-12">Message</label>
+							<textarea name="Message" id="message" class="input input-textarea" row=40></textarea>
 						</div>
 					</div>
 				</section>

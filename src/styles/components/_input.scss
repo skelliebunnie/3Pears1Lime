@@ -9,6 +9,11 @@
 		reset; search
 		submit
  * ==================================== */
+label, .label {
+	display: inline-block;
+
+}
+
 label + .input {
 	margin-top: 1rem;
 }
