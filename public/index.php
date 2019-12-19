@@ -15,33 +15,39 @@
 			</section>
 		</header>
 		<main class="column">
-			<article id="find" class="col col-md-6">
-				<section class="container">
-					<h2>Find a <br><span>Recipe</span></h2>
-					<div class="image-list image-list--right">
-						<img src="images/dishes/FancySalad.png" alt="">
-						<img src="images/dishes/zach-ward--01.png" alt="">
-						<img src="images/dishes/Fancy Salad 2.png" alt="">
-					</div>
-				</section>
-			</article>
-			<article id="explore" class="col col-md-6">
-				<section class="container">
-					<h2>Explore <br><span>Cooking</span></h2>
-					<div class="image-list image-list--left">
-						<img src="images/dishes/louis-hansel-00.png" alt="">
-						<img src="images/dishes/brandon-morgan--01.png" alt="">
-						<img src="images/dishes/shawn-ang--00.png" alt="">
-					</div>
-				</section>
-			</article>
+			<div class="row">
+				<article id="find" class="col">
+					<section class="container">
+						<h2 class="section-title">Find a <br><span>Recipe</span></h2>
+						<div class="image-list image-list--right">
+							<img src="images/dishes/FancySalad.png" alt="">
+							<img src="images/dishes/zach-ward--01.png" class="rotate" alt="">
+							<img src="images/dishes/Fancy Salad 2.png" alt="">
+							<img src="images/dishes/monika-grabkowska--0.png" alt="">
+						</div>
+					</section>
+				</article>
+				<article id="explore" class="col">
+					<section class="container">
+						<h2 class="section-title">Explore <br><span>Cooking</span></h2>
+						<div class="image-list image-list--left">
+							<img src="images/dishes/louis-hansel-00.png" alt="">
+							<img src="images/dishes/shawn-ang--00.png" class="rotate" alt="">
+							<img src="images/dishes/sina-piryae--00.png" alt="">
+							<img src="images/dishes/nirzar-pangarkar--00.png" alt="">
+							
+						</div>
+					</section>
+				</article>
+			</div>
 			<article id="submit" class="col col-md-6">
 				<section class="container">
-					<h2>Submit a <br><span>Recipe</span></h2>
+					<h2 class="section-title">Submit a <br><span>Recipe</span></h2>
 					<div class="image-list image-list--right">
 						<img src="images/dishes/alfred-rowe--00.png" alt="">
 						<img src="images/dishes/alexander-ross--00.png" alt="">
-						<img src="images/dishes/nirzar-pangarkar--00.png" alt="">
+						<img src="images/dishes/brandon-morgan--01.png" alt="">
+						<img src="images/dishes/peter-dawn--00.png" alt="">
 					</div>
 				</section>
 			</article>
@@ -80,9 +86,9 @@
 				</section>
 			</article>
 		</aside>
-		<footer class="row copyright">
+		<footer class="copyright">
 			<section class="col col-12">
-				<p>Copyright &copy; <?php date('Y'); ?> <strong>3 Pears & A Lime</strong></p>
+				<p>Copyright &copy; <?php echo date('Y'); ?> <strong>3 Pears & A Lime</strong></p>
 			</section>
 		</footer>
 	</div>

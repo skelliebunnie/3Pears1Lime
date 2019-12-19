@@ -3,17 +3,26 @@ header {
 	background-color: $header--bg-color;
 	color: getContrast(getColor('neutral-700'));
 	background: url('../images/headerBG3.png') no-repeat;
-	background-position: top;
+	background-size: cover;
+	background-position: bottom;
 	height: 22rem;
 	overflow: hidden;
-	padding-top: 10rem;
 	padding-bottom: 3rem;
 	z-index: 50;
 	border-bottom: 1rem solid getColor('neutral-700');
+	transition: all .5s ease-out;
+}
 
-	#pears-lime {
-		position: absolute;
-		bottom: 1rem;
+#pears-lime {
+	position: absolute;
+	bottom: 1rem;
+	text-align: center;
+
+	img {
+		display: inline-block;
+		margin: 0 auto;
+		height: 8rem; 
+		width: auto; 
 	}
 }
 

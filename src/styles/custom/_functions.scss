@@ -1,6 +1,11 @@
-@function headerGradient($direction, $color) {
+@function headerGradient($direction, $color, $double: false) {
 	$clr100: getRGBA($color, 100%);
 	$clr0: getRGBA($color, 0%);
 
-	@return linear-gradient( to $direction, $clr100 81%, $clr100 85%, $clr0 85%, $clr0 87%, $clr100 87%, $clr100 91%, $clr0 91%, $clr0 93%, $clr100 93%, $clr100 96%, $clr0 96%, $clr0 98%, $clr100 98%);
+	@if $double == true {
+		@return linear-gradient( to $direction, $clr100 2%, $clr0 2%, $clr0 4%, $clr100 4%, $clr100 7%, $clr0 7%, $clr0 9%, $clr100 9%, $clr100 13%, $clr0 13%, $clr0 15%, $clr100 15%, $clr100 85%, $clr0 85%, $clr0 87%, $clr100 87%, $clr100 91%, $clr0 91%, $clr0 93%, $clr100 93%, $clr100 96%, $clr0 96%, $clr0 98%, $clr100 98%);
+
+	} @else {
+		@return linear-gradient( to $direction, $clr100 85%, $clr0 85%, $clr0 87%, $clr100 87%, $clr100 91%, $clr0 91%, $clr0 93%, $clr100 93%, $clr100 96%, $clr0 96%, $clr0 98%, $clr100 98%);
+	}
 }

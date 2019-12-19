@@ -1,4 +1,21 @@
-.column > .col { padding: 0; }
+article:nth-child(1) { margin-top: 2rem; }
+
+// main article + article { margin-top: 7rem; }
+
+.column {
+	display: block;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+	& > .col { 
+		padding: 0;
+		display: block;
+		width: 100%;
+	}
+}
+
+.row { @extend .column; }
 
 .container { 
 	position: relative;

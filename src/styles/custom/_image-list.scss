@@ -3,6 +3,7 @@
 	z-index: -10;
 	height: $main-sections--height;
 	width: 480px;
+	transition: all .3s ease-out;
 
 	img { 
 		position: absolute;
@@ -20,23 +21,32 @@
 				@if $i >= 2 { left: $img-offset-increment; }
 				z-index: -20 - $i;
 			}
-			$img-offset-increment: $img-offset-increment * 1.75;
+			$img-offset-increment: $img-offset-increment * 1.55;
 		}
 	}
 
 	&--left {
-		right: $img-offset;
+		right: $img-offset + 10;
+
+		img:nth-child(1) {
+			right: 5%;
+		}
 		
 		$img-offset-increment: $img-offset;
-		@for $i from 1 through 6 {
+		@for $i from 2 through 6 {
 			& img:nth-child(#{$i}) {
-				right: $img-offset-increment;
-
+				@if $i == 3 {
+					right: $img-offset-increment;
+				} @else {
+					right: $img-offset-increment + 5;
+				}
+		
 				z-index: -20 - $i;
 			}
-			$img-offset-increment: $img-offset-increment + 35;
+			$img-offset-increment: $img-offset-increment * 1.5;
 		}
 	}
 }
 
-#find img:nth-child(2) { transform: rotateZ(-55deg); }
+#find .rotate { transform: rotateZ(-55deg); }
+#explore .rotate { transform: rotateZ(15deg); }

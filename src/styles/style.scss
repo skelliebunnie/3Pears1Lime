@@ -12,8 +12,10 @@
 				'global/mixins',
 				'global/helpers';
 
-@import "grid/grid",
-			  "grid/mq"; // media queries
+// @import "grid/grid",
+// 			  "grid/mq"; // media queries
+@import "grid/grid-base";
+@import "grid/variables";
 
 @import "typography/typography",
 				"typography/headers",
@@ -69,3 +71,4 @@
 @import "settings-helpers";
 
 @import "custom/custom";
+@import "custom/mq";

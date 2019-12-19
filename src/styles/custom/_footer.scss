@@ -1,9 +1,18 @@
+#cocktails,
+#contact {
+	display: inline-block;
+	
+	.container {
+		margin: 0 auto;
+	}
+}
+
 #cocktails {
 	$color: getColor('tertiary-500');
 	background-color: $color;
 	color: getContrast($color);
 	text-align: center;
-	margin-top: 6rem;
+	margin-top: 4rem;
 	max-height: 19rem;
 
 	.container {
